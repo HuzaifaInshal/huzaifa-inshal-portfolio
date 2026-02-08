@@ -1,14 +1,14 @@
 import React from "react";
 
-type AnimatedLinkProps = {
+type UnderlinedTextProps = {
   className?: string;
   children?: React.ReactNode;
 };
 
-export default function AnimatedLink({
+export default function UnderlinedText({
   children,
   className = ""
-}: AnimatedLinkProps) {
+}: UnderlinedTextProps) {
   return (
     <p className={`relative inline-block ${className}`}>
       <span className="relative">
