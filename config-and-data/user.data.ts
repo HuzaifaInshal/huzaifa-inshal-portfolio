@@ -7,6 +7,10 @@ export const userData = {
   emailTo: "mailto:huzaifainshal@gmail.com",
   location: "Karachi, Pakistan",
 
+  // SOCIALS
+
+  linkedIn: "",
+
   // ABOUT AND DESCRIPTIONS
 
   aboutA:
