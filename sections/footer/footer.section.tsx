@@ -1,8 +1,7 @@
-import React from "react";
 import SectionHeading from "@/components/section-heading.component";
+import { styles_SectionContainer } from "@/styles/section/section.styles";
 import { cn } from "@/utils/cn.util";
 import Collaborate from "./section-components/collaborate.component";
-import { styles_SectionContainer } from "@/styles/section/section.styles";
 
 const FooterSection = () => {
   return (
