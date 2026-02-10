@@ -4,6 +4,7 @@ import { cn } from "@/utils/cn.util";
 import Link from "next/link";
 import { MouseEventHandler } from "react";
 import { Fragment } from "react/jsx-runtime";
+import ArrowUpright from "./arrow-upright.component";
 
 interface Props {
   title: string;
@@ -18,21 +19,29 @@ interface Props {
   };
 }
 
-const containerClass = cn(styles_Typography["paragraph-base"], "flex flex-col");
+const containerClass = cn(
+  styles_Typography["paragraph-base-dark"],
+  "flex flex-col",
+  "text-left"
+);
 
 const ActionItem = ({ title, description, link, onClick }: Props) => {
   const InnerContent = () => (
     <Fragment>
       <p>{title}</p>
       {description && <p>{description}</p>}
-      {link && <UnderlinedText>{link.text}</UnderlinedText>}
+      {link && (
+        <UnderlinedText>
+          {link.text} <ArrowUpright />
+        </UnderlinedText>
+      )}
       {onClick && <UnderlinedText>{onClick.text}</UnderlinedText>}
     </Fragment>
   );
 
   if (link) {
     return (
-      <Link href={link} className={containerClass}>
+      <Link href={link} className={cn(containerClass, "cursor-pointer")}>
         {InnerContent()}
       </Link>
     );
@@ -40,7 +49,10 @@ const ActionItem = ({ title, description, link, onClick }: Props) => {
 
   if (onClick) {
     return (
-      <button onClick={onClick.click} className={containerClass}>
+      <button
+        onClick={onClick.click}
+        className={cn(containerClass, "cursor-pointer")}
+      >
         {InnerContent()}
       </button>
     );

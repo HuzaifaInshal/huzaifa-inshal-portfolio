@@ -7,7 +7,13 @@ interface Props {
 
 const HeaderItem = ({ children }: Props) => {
   return (
-    <li className={cn(styles_Typography["paragraph-base"], "uppercase")}>
+    <li
+      className={cn(
+        styles_Typography["paragraph-base"],
+        "uppercase",
+        "list-none"
+      )}
+    >
       {children}
     </li>
   );

@@ -9,7 +9,7 @@ interface Props {
 
 const SectionHeading = ({ children }: Props) => {
   return (
-    <div className="">
+    <div className="pb-10">
       <h1 className={cn(styles_Typography["heading-1"])}>{children}</h1>
       <Divider />
     </div>

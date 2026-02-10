@@ -5,8 +5,10 @@ import HeaderItem from "./section-components/header-item.component";
 
 const HeaderSection = () => {
   return (
-    <div className={cn("h-20 w-full", "flex items-center")}>
-      <div className={cn("flex items-center justify-between gap-8", "")}>
+    <div
+      className={cn("h-22 w-full", "mt-4", "flex items-center justify-center")}
+    >
+      <div className={cn("flex justify-between gap-8", "w-full")}>
         <ActionItem
           title="Currently based in"
           description={userData.location}
@@ -19,7 +21,7 @@ const HeaderSection = () => {
           title="Switch to"
           onClick={{ click: () => {}, text: "Dark Mode" }}
         />
-        <div className={cn("flex items-center gap-8")}>
+        <div className={cn("flex gap-10")}>
           <HeaderItem>about</HeaderItem>
           <HeaderItem>experience</HeaderItem>
           <HeaderItem>projects</HeaderItem>

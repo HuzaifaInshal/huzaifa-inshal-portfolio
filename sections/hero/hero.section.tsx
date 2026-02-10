@@ -7,13 +7,19 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className={cn(styles_SectionContainer, "flex flex-col gap-52")}
+      className={cn(
+        styles_SectionContainer,
+        "h-[calc(100dvh-104px)]",
+        "flex flex-col justify-evenly gap-15"
+      )}
     >
       <h1 className={cn(styles_Typography.title, "flex flex-col")}>
         <span className="text-left self-start">{userData.firstName}</span>
         <span className="text-right self-end">{userData.lastName}</span>
       </h1>
-      <h2 className={styles_Typography.subTitle}>{userData.aboutA}</h2>
+      <h2 className={cn(styles_Typography.subTitle, "max-w-175")}>
+        {userData.aboutA}
+      </h2>
     </section>
   );
 };
