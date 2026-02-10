@@ -14,7 +14,7 @@ const Collaborate = () => {
         >
           <h2>Let&apos;s Collaborate</h2>
         </div>
-        <UnderlinedText>
+        <UnderlinedText className="[&_span]:-bottom-4">
           <a
             className={styles_Typography["footer-heading-2"]}
             href={userData.emailTo}
