@@ -42,13 +42,13 @@ const ExperienceItem = ({ item }: Props) => {
               <p>{item.title}</p>
               <p className={cn("mt-4")}>{item.location}</p>
               <p className={cn("mt-4")}>{item.industry}</p>
-              <p className={cn("mt-4")}>
+              <div className={cn("mt-4")}>
                 <UnderlinedText>
                   <a href={item.website} target="_blank" rel="noreferrer">
                     {item.website.replace(/^https?:\/\//, "")}
                   </a>
                 </UnderlinedText>
-              </p>
+              </div>
             </div>
           </div>
         </div>
