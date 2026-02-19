@@ -14,8 +14,12 @@ const HeroSection = () => {
       )}
     >
       <h1 className={cn(styles_Typography.title, "flex flex-col items-center")}>
-        <span className="text-left -ms-[30%]">{userData.firstName}</span>
-        <span className="text-right -me-[30%]">{userData.lastName}</span>
+        <span className="text-left self-start md:self-center ms-0 md:-ms-[30%]">
+          {userData.firstName}
+        </span>
+        <span className="text-right self-end md:self-center me-0 md:-me-[30%]">
+          {userData.lastName}
+        </span>
       </h1>
       <h2 className={cn(styles_Typography.subTitle, "max-w-175")}>
         {userData.aboutA}

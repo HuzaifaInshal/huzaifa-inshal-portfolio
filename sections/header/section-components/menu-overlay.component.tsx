@@ -14,32 +14,34 @@ interface Props {
 }
 
 const MenuOverlay = ({ isOpen, onClose }: Props) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
+  //   useEffect(() => {
+  //     if (isOpen) {
+  //       document.body.style.overflow = "hidden";
+  //     } else {
+  //       document.body.style.overflow = "auto";
+  //     }
+  //     return () => {
+  //       document.body.style.overflow = "auto";
+  //     };
+  //   }, [isOpen]);
 
   return (
     <>
-      {isOpen && (
+      {/* {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={onClose}
         />
-      )}
+      )} */}
       <div
         className={cn(
-          "fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 transform transition-transform duration-300 ease-in-out",
-          isOpen ? "translate-x-0" : "translate-x-full"
+          "fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 transition-opacity duration-300 ease-in-out",
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         )}
       >
-        <div className="flex flex-col h-full p-8">
+        <div className="flex flex-col h-full p-6 pt-9">
           {/* Close Button */}
           <div className="flex justify-end mb-12">
             <UnderlinedText>
