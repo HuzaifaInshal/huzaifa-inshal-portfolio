@@ -7,10 +7,7 @@ import Divider from "@/components/divider.componet";
 const FooterSection = () => {
   return (
     <>
-      <section
-        id="contact"
-        className={cn(styles_SectionContainer, "pb-[3rem]")}
-      >
+      <section id="contact" className={cn(styles_SectionContainer, "pb-12")}>
         <div className={cn("container mx-auto")}>
           <Divider />
           <div className={cn("mt-8")}>

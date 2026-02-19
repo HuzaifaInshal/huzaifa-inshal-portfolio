@@ -8,7 +8,12 @@ import ArrowUpright from "@/components/arrow-upright.component";
 const Collaborate = () => {
   return (
     <div className={cn("flex flex-col gap-28", "w-full")}>
-      <div className={cn("flex items-center justify-between gap-3", "w-full")}>
+      <div
+        className={cn(
+          "flex flex-col md:flex-row md:items-center justify-between gap-3",
+          "w-full"
+        )}
+      >
         <div
           className={cn("lg:col-span-7", styles_Typography["footer-heading-1"])}
         >
@@ -23,7 +28,12 @@ const Collaborate = () => {
           </a>
         </UnderlinedText>
       </div>
-      <div className={cn("flex items-center justify-between gap-3", "w-full")}>
+      <div
+        className={cn(
+          "flex flex-col-reverse md:flex-row md:items-center justify-between gap-6",
+          "w-full"
+        )}
+      >
         <div
           className={cn(
             "w-full lg:w-auto flex justify-start lg:justify-end items-center"

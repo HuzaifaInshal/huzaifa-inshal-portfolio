@@ -9,8 +9,8 @@ const HeroSection = () => {
       id="hero"
       className={cn(
         styles_SectionContainer,
-        "h-[calc(100dvh-104px)]",
-        "flex flex-col justify-evenly gap-15"
+        "h-[calc(100dvh-104px)] md:h-[calc(100dvh-104px)]",
+        "flex flex-col justify-around md:justify-evenly gap-15"
       )}
     >
       <h1 className={cn(styles_Typography.title, "flex flex-col items-center")}>

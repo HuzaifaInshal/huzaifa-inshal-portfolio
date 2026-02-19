@@ -14,7 +14,7 @@ export default function UnderlinedText({
       <span className="relative">
         {children}
         <span className="absolute -bottom-1 left-0 w-full h-px bg-text-light opacity-30" />
-        <span className="absolute -bottom-1 left-0 w-0 h-px bg-text transition-all duration-300 ease-out hover:w-full group-hover:w-full" />
+        <span className="absolute -bottom-1 left-0 w-full md:w-0 h-px bg-text transition-all duration-300 ease-out hover:w-full group-hover:w-full" />
       </span>
     </p>
   );

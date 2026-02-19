@@ -17,6 +17,7 @@ interface Props {
     text: string;
     click: MouseEventHandler<HTMLButtonElement>;
   };
+  containerClassName?: string;
 }
 
 const containerClass = cn(
@@ -25,7 +26,13 @@ const containerClass = cn(
   "text-left"
 );
 
-const ActionItem = ({ title, description, link, onClick }: Props) => {
+const ActionItem = ({
+  title,
+  description,
+  link,
+  onClick,
+  containerClassName
+}: Props) => {
   const InnerContent = () => (
     <Fragment>
       <p>{title}</p>
@@ -41,7 +48,10 @@ const ActionItem = ({ title, description, link, onClick }: Props) => {
 
   if (link) {
     return (
-      <Link href={link} className={cn(containerClass, "cursor-pointer")}>
+      <Link
+        href={link}
+        className={cn(containerClass, "cursor-pointer", containerClassName)}
+      >
         {InnerContent()}
       </Link>
     );
@@ -51,14 +61,18 @@ const ActionItem = ({ title, description, link, onClick }: Props) => {
     return (
       <button
         onClick={onClick.click}
-        className={cn(containerClass, "cursor-pointer")}
+        className={cn(containerClass, "cursor-pointer", containerClassName)}
       >
         {InnerContent()}
       </button>
     );
   }
 
-  return <div className={containerClass}>{InnerContent()}</div>;
+  return (
+    <div className={cn(containerClass, containerClassName)}>
+      {InnerContent()}
+    </div>
+  );
 };
 
 export default ActionItem;
