@@ -13,9 +13,9 @@ const HeroSection = () => {
         "flex flex-col justify-evenly gap-15"
       )}
     >
-      <h1 className={cn(styles_Typography.title, "flex flex-col")}>
-        <span className="text-left self-start">{userData.firstName}</span>
-        <span className="text-right self-end">{userData.lastName}</span>
+      <h1 className={cn(styles_Typography.title, "flex flex-col items-center")}>
+        <span className="text-left -ms-[30%]">{userData.firstName}</span>
+        <span className="text-right -me-[30%]">{userData.lastName}</span>
       </h1>
       <h2 className={cn(styles_Typography.subTitle, "max-w-175")}>
         {userData.aboutA}
